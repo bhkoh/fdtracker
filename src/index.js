@@ -42,7 +42,7 @@ ReactDOM.render(
   
 
  
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     
    
       {/* <Route path="/login"> <SignInSide/> </Route> */}
