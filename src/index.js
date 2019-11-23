@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Router, HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Router, BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/animate.min.css";
@@ -42,22 +42,22 @@ ReactDOM.render(
   
 
  
-  <HashRouter>
+  <BrowserRouter>
     
    
       {/* <Route path="/login"> <SignInSide/> </Route> */}
       
       <Switch>
         <Route exact path="/" render={props => <SignInSide {...props} />}/> 
-        <Route exact path="/fdtracker/#/signup" render={props => <SignUpSide {...props} />}/> 
+        <Route exact path="/signup" render={props => <SignUpSide {...props} />}/> 
         {/* <Route exact path="/hap"  render={props => <AdminNavbarLinks {...props} />}/> */}
         {/* <Route exact path="/"> <SignInSide/> </Route> */}
-        <Route path="/fdtracker/#/admin/dashboard" render={props => <AdminLayout {...props} />} />
+        <Route path="/admin/dashboard" render={props => <AdminLayout {...props} />} />
         {/* <ProtectedRoute path="/admin/dashboard" render={props => <AdminLayout/>} /> */}
         {/* <Redirect from="/" to="/login" /> */}
         {/* <Redirect from="/" to="/admin/dashboard" /> */}
       {/* <Route path="*" component={() => "404 Not found"}/> */}
       </Switch>
-    </HashRouter>,
+    </BrowserRouter>,
   document.getElementById("root")
 );
