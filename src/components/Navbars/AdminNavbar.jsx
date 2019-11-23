@@ -45,11 +45,14 @@ class Header extends Component {
     document.body.appendChild(node);
   }
   render() {
+    let obj = window.sessionStorage.getItem('user');
+    let user = JSON.parse(obj);
     return (
       <Navbar fluid>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#pablo">{this.props.brandText}</a>
+            <a href="#pablo">Hi, {user.name}</a> 
+            {/* <a href="#pablo">{this.props.brandText}</a> */}
           </Navbar.Brand>
           <Navbar.Toggle onClick={this.mobileSidebarToggle} />
         </Navbar.Header>

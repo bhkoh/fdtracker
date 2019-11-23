@@ -17,8 +17,23 @@
 */
 import React, { Component } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
+import Auth from "Auth";
+import { Route , withRouter} from 'react-router-dom';
 
 class AdminNavbarLinks extends Component {
+  constructor(props) {
+    super(props);
+    this.exit = this.exit.bind(this);
+
+  }
+
+  exit() {
+    Auth.logout(() => {
+      
+      window.sessionStorage.removeItem('user');
+      this.props.history.push("/");
+    })
+  }
   render() {
     const notification = (
       <div>
@@ -32,10 +47,10 @@ class AdminNavbarLinks extends Component {
       <div>
         <Nav>
           <NavItem eventKey={1} href="#">
-            <i className="fa fa-dashboard" />
+            {/* <i className="fa fa-dashboard" /> */}
             <p className="hidden-lg hidden-md">Dashboard</p>
           </NavItem>
-          <NavDropdown
+          {/* <NavDropdown
             eventKey={2}
             title={notification}
             noCaret
@@ -50,13 +65,13 @@ class AdminNavbarLinks extends Component {
           <NavItem eventKey={3} href="#">
             <i className="fa fa-search" />
             <p className="hidden-lg hidden-md">Search</p>
-          </NavItem>
+          </NavItem> */}
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">
+          {/* <NavItem eventKey={1} href="#">
             Account
-          </NavItem>
-          <NavDropdown
+          </NavItem> */}
+          {/* <NavDropdown
             eventKey={2}
             title="Dropdown"
             id="basic-nav-dropdown-right"
@@ -68,8 +83,8 @@ class AdminNavbarLinks extends Component {
             <MenuItem eventKey={2.5}>Something</MenuItem>
             <MenuItem divider />
             <MenuItem eventKey={2.5}>Separated link</MenuItem>
-          </NavDropdown>
-          <NavItem eventKey={3} href="#">
+          </NavDropdown> */}
+          <NavItem eventKey={3} href="#" onClick={this.exit}>
             Log out
           </NavItem>
         </Nav>
@@ -78,4 +93,4 @@ class AdminNavbarLinks extends Component {
   }
 }
 
-export default AdminNavbarLinks;
+export default withRouter(AdminNavbarLinks);

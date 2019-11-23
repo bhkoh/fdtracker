@@ -149,7 +149,15 @@ var style = {
       WebkitBoxShadow: 0,
       MozBoxShadow: 0,
       boxShadow: 0
-    }
+    },
+
+    r4: {
+      borderTop: 0,
+      backgroundColor: "#9368E9",
+      WebkitBoxShadow: 0,
+      MozBoxShadow: 0,
+      boxShadow: 0
+    },
   },
 
   Title: {
@@ -219,6 +227,9 @@ var style = {
     info: {
       // color: '#e8f0f4',
       // backgroundColor: '#63d8f1'
+    },
+    r4 : {
+      
     }
   },
 
@@ -250,6 +261,10 @@ var style = {
     info: {
       backgroundColor: "#63d8f1",
       color: "#ffffff"
+    },
+    r4 :{
+      backgroundColor: '#9368E9',
+      color: '#ffffff'
     }
   },
 
@@ -266,14 +281,14 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Salary", "Country", "City"];
+const thArray = ["Rank", "Username", "Region", "No. of mins chanted"];
 const tdArray = [
-  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-  ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-  ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-  ["4", "Philip Chaney", "$38,735", "Korea, South", "Overland Park"],
-  ["5", "Doris Greene", "$63,542", "Malawi", "Feldkirchen in Kärnten"],
-  ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
+  ["1", "Dakota Rice", "2", "124"],
+  ["2", "Minerva Hooper", "4", "70"],
+  ["3", "Sage Rodriguez", "7", "60"],
+  ["4", "Philip Chaney", "1", "50"],
+  ["5", "Doris Greene", "1", "40"],
+  ["6", "Mason Porter", "5", "20"]
 ];
 
 //
@@ -497,8 +512,8 @@ var dataPie = {
   series: [40, 20, 40]
 };
 var legendPie = {
-  names: ["Open", "Bounce", "Unsubscribe"],
-  types: ["info", "danger", "warning"]
+  names: ["R1", "R2", "R3", "R4","R5","R6", "R7","R8"],
+  types: ["info", "r2", "warning", "r4", "success", "r6", "r7", "r8", "r9"]
 };
 
 // Data for Line Chart
@@ -555,22 +570,19 @@ var legendSales = {
 // Data for Bar Chart
 var dataBar = {
   labels: [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "Mai",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    
   ],
   series: [
-    [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-    [412, 243, 280, 580, 453, 353, 300, 364, 368, 410, 636, 695]
+    [542, 443, 320, 780, 553, 453, 326, 123],
+    [412, 243, 280, 580, 453, 353, 300, 124]
   ]
 };
 var optionsBar = {
@@ -594,8 +606,8 @@ var responsiveBar = [
   ]
 ];
 var legendBar = {
-  names: ["Tesla Model S", "BMW 5 Series"],
-  types: ["info", "danger"]
+  names: ["YMD", "YWD"],
+  types: ["info","danger"]
 };
 
 module.exports = {
