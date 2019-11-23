@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebdf0ff5310f892567a4239b31bafeff",
+    "revision": "bf4f8213d4d89df1f4d4892244f193ad",
     "url": "/fdtracker/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fdtracker/static/css/2.8024a5e8.chunk.css"
   },
   {
-    "revision": "0587b3b3c5424fe800dc",
+    "revision": "c120addaa04e1bc26cd1",
     "url": "/fdtracker/static/css/main.5989cb28.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fdtracker/static/js/2.243f423b.chunk.js"
   },
   {
-    "revision": "0587b3b3c5424fe800dc",
-    "url": "/fdtracker/static/js/main.753b42a8.chunk.js"
+    "revision": "c120addaa04e1bc26cd1",
+    "url": "/fdtracker/static/js/main.88e433e9.chunk.js"
   },
   {
     "revision": "fae96fdfb742055abfae",
