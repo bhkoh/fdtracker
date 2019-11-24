@@ -95,6 +95,8 @@ export default function SignInSide(props) {
     let hasErrors = validateInputs();
     if(hasErrors) {
       alert("Error. Please enter username and password");
+      setUsername("");
+      setPassword("");
     } else {
       Auth.login(() => {
         axios.post(url+'authenticateUser', null, {params: {'username': username, 'password': password}})
@@ -105,6 +107,8 @@ export default function SignInSide(props) {
             props.history.push("/admin/dashboard");
           } else {
             alert("Error Logging In");
+            setUsername("");
+            setPassword("");
           }
           
         }).catch(error => {
@@ -114,11 +118,13 @@ export default function SignInSide(props) {
         
         
     })
+    setUsername("");
+    setPassword("");
+
     }
       
 
-      setUsername("");
-      setPassword("");
+      
   
   }
 
@@ -146,6 +152,7 @@ export default function SignInSide(props) {
               autoComplete="username"
               autoFocus
               onChange={handleChange}
+              value={username}
             />
             <TextField
               variant="outlined"
@@ -156,6 +163,7 @@ export default function SignInSide(props) {
               label="Password"
               type="password"
               id="password"
+              value={password}
               autoComplete="current-password"
               onChange={handleChange}
             />

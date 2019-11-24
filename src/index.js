@@ -49,7 +49,7 @@ ReactDOM.render(
       
       <Switch>
         <Route exact path="/" render={props => <SignInSide {...props} />}/> 
-        <Route exact path={process.env.PUBLIC_URL + "/signup"} render={props => <SignUpSide {...props} />}/> 
+        <Route exact path="/signup" render={props => <SignUpSide {...props} />}/> 
         {/* <Route exact path="/hap"  render={props => <AdminNavbarLinks {...props} />}/> */}
         {/* <Route exact path="/"> <SignInSide/> </Route> */}
         <Route path="/admin/dashboard" render={props => <AdminLayout {...props} />} />

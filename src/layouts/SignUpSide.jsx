@@ -265,6 +265,7 @@ export default function SignUp() {
                 variant="outlined"
                 required
                 fullWidth
+                value={name}
                 id="name"
                 label="Name"
                 autoFocus

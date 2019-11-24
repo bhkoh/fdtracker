@@ -159,7 +159,7 @@ class Dashboard extends Component {
       axios.get(url+"updateDaimoku?hours="+v+"&id="+user.id).then(response => {
       console.log(response);
       })
-      alert("Daimoku hours has been updated");
+      alert("Daimoku record has been updated");
       this.reload();
 
     } else {
